@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Sports!</title>
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link href="./css/master.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div class="opciones">
+            <ul>
+                <li ><input class="menu" type="button" value="HOME"></input></li>
+                <li ><input class="menu" id="menutorneo" type="button" value="TORNEOS"></input></li>
+            </ul>
+            <ul id="ul2">
+                <li><input class="menu2" type="button" value="NOSOTROS"></input></li>
+                <li><input class="menu2" type="button" value="CONTACTO"></input></li>
+            </ul>
+            <a href="index.html" class="logout"><input class="logout" type="image" src="./img/logout.png" alt=""></a>
+        </div>
+        <div id="home" class="demenu">
+        </div>
+        <div id="torneos" class="demenu">
+            <button id="creartorneo" >CREAR TORNEO</button>
+            <button id="cancelarcreacion" >CANCELAR</button>
+            <input type="text" name="search" id="buscador" placeholder="Buscar por juego...">
+            <div id="creaciontorneo">
+                <form id="form1" action="">
+                    <h2>Creación de torneo:</h2>
+                        <select id="idJuego" name="juego"| aria-placeholder="Juego">
+                            <option value="0">Juego:</option>
+                            <option value="https://www.esportmaniacos.com/wp-content/uploads/2021/01/Cardenete.jpg">League of Legends</option>
+                            <option value="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/03/27/15537190644260.png">CS:GO</option>
+                            <option value="https://afkgaming.com/media/images/18451-Cover%20Image%20-%20VALORANT%20Releases%20Tournament%20Guidelines.jpg">Valorant</option>
+                            <option value="https://img.redbull.com/images/c_fill,w_1500,h_1000,g_auto,f_auto,q_auto/redbullcom/2018/12/14/7518db4d-58a6-4868-aa3c-748ad1dd6dd7/brawl-stars">Brawl Stars</option>
+                            <option value="https://i.blogs.es/8935db/lroyale/1366_2000.jpg">Clash Royale</option>
+                            <option value="https://sm.ign.com/t/ign_es/screenshot/default/ea8bc81e-23e4-4317-aaf2-cc17917236cf_f6d7.1280.jpg">FIFA 21</option>
+                        </select>
+                    <input type="text" class="ingresartorneo" id="idNombre" placeholder="Nombre del torneo"></input>
+                    <input type="text" class="ingresartorneo" id="idPremio" placeholder="Premio del Torneo"></input>
+                    <input type="text" class="ingresartorneo" id="idInscriptos" placeholder="Cantidad de jugadores"></input>
+                    <input type="text" class="ingresartorneo" id="idOrganizador" placeholder="Ingrese su usuario"></input>
+                    <label for="idRegistro">Registro:  Desde</label>
+                    <input type="date" class="ingresartorneo" id="idRegistro"></input>
+                    <label for="idRegistrofin"> hasta</label>
+                    <input type="date" class="ingresartorneofin" id="idRegistrofin"></input>
+                    <br></br>
+                    <label for="idDia">Fecha de inicio:</label>
+                    <input type="date" class="ingresartorneo" id="idDia" ></input>
+                    <label for="idHora"> Hora:</label>
+                    <input type="time" class="ingresartorneo" id="idHora" ></input>
+                    <input type="button" value="Crear Torneo" id="crearTorneito" onclick="">
+                </form>
+            </div>
+            <div id="pags">
+            </div>
+        </div>
+    
+        <div id="quienessomos" class="demenu">
+            
+        </div>
+        
+        <div id="contacto" class="demenu">
+            
+        </div>
+        <img id="logo" src="./img/logo.jpg" alt="">
+        <form action="" id="log"> 
+            <h1>Log-In</h1>
+            <!-- Nombre de Usuario -->
+            <label for="username"></label>
+            <input id="idUser" class="login" type="text" placeholder="Usuario" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Por favor, ingrese su usuario.'" required></input>
+            <!-- Contraseña -->
+            <label or="contraseña"></label>
+            <input id="idPass" class="login" type="password" placeholder="Contraseña" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Por favor, ingrese su contraseña.'" required></input>
+
+            <!-- Submit -->
+            <input id="submit" type="button" value="INGRESAR" onclick=""></input>
+            
+            <!-- Contraseña Perdida -->
+            <br><a href="" >¿Perdiste tu contraseña?</a></br>
+            <a href="" >¿Usuario nuevo?</a>
+        </form>
+    </div>
+    <script src="./JS/funciones/PublicarTorneo.js"></script>
+    <script src="./JS/funciones/JsonManager.js"></script>
+    <script src="./JS/config/globalVariables.js"></script>
+    <script src="./JS/funciones/GlobalLocalStorageManager.js"></script>
+    <script src="./JS/funciones/OnSysteminit.js"></script>
+    <script src="./JS/Clases/Usuario.js"></script>
+    <script src="./JS/Clases/Torneo.js"></script>
+    <script src="./JS/funciones/RegistrarTorneo.js"></script>
+    <script src="./JS/funciones/RegistrodeUsuario.js"></script>
+    <script src="./JS/funciones/pagTorneos.js"></script>
+    <script src="./JS/DOM/LinkDOM.js"></script>
+    <script src="./JS/postlogin.js"></script>
+    <script src="./JS/UserEvets.js"></script>
+</body>
+</html>

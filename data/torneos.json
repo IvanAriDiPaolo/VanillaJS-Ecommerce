@@ -1,0 +1,58 @@
+[
+    {
+        "juego": "https://www.esportmaniacos.com/wp-content/uploads/2021/01/Cardenete.jpg" ,
+        "nombre": "Champs",
+        "premio": "Copas2",
+        "inscriptos": "32",
+        "organizador": "Ivan",
+        "registro": "10/2/2021",
+        "registrofin":"11/2/2021",
+        "inicio": "12/2/2021",
+        "hora": "13:00",
+        "id":"T100"
+    },{
+        "juego": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/03/27/15537190644260.png" ,
+        "nombre": "Winn",
+        "premio": "Copas5",
+        "inscriptos": "64",
+        "organizador": "Ivansito",
+        "registro": "10/2/2021",
+        "registrofin":"12/2/2021",
+        "inicio": "13/2/2021",
+        "hora": "14:00",
+        "id":"T101"
+    },{
+        "juego": "https://i.blogs.es/8935db/lroyale/1366_2000.jpg" ,
+        "nombre": "Ganadores",
+        "premio": "Cosas",
+        "inscriptos": "32",
+        "organizador": "Ivan",
+        "registro": "15/2/2021",
+        "registrofin":"16/2/2021",
+        "inicio": "17/2/2021",
+        "hora": "14:00",
+        "id":"T102"
+    },{
+        "juego": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/03/27/15537190644260.png" ,
+        "nombre": "Chammmpionsleaguee",
+        "premio": "Copas5",
+        "inscriptos": "35",
+        "organizador": "IvanDP",
+        "registro": "17/2/2021",
+        "registrofin":"18/2/2021",
+        "inicio": "19/2/2021",
+        "hora": "12:00",
+        "id":"T103"
+    },{
+        "juego": "https://sm.ign.com/t/ign_es/screenshot/default/ea8bc81e-23e4-4317-aaf2-cc17917236cf_f6d7.1280.jpg" ,
+        "nombre": "Champs",
+        "premio": "Copas42",
+        "inscriptos": "32",
+        "organizador": "Iv23an",
+        "registro": "20/2/2021",
+        "registrofin":"21/2/2021",
+        "inicio": "22/2/2021",
+        "hora": "12:00",
+        "id":"T104"
+    }
+]

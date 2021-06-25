@@ -1,0 +1,3 @@
+const LocalStorageGlobalVariables = {
+    Torneos: "Torneos",
+};
