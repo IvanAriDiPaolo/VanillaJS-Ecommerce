@@ -4,7 +4,7 @@ class NuevoUsuario {
         this.contra = contra;
     }
     asignarid(){
-        this.id = usersid.length+1
-        usersid.push(this.id);
+        this.id = 'S' + usersid.length+1;
+        usersid.push('S'+this.id);
     }
 }

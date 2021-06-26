@@ -55,7 +55,7 @@ $(document).ready(function(){
         });
     });
     $("#crearTorneito").click(function(){
-        if($('#idJuego').val() != "" && $('#idNombre').val() != "" && $('#idPremio').val() != "" && $('#idInscriptos').val() != "" && $('#idOrganizador').val() != "" && $('#idRegistro').val() != "" && $('#idRegistrofin').val() != "" && $('#idDia').val() != "" && $('#idHora').val() != "" && $('#idDia').val() > $('#idRegistrofin').val()){
+        if($('#idJuego option:selected').val() != "0" && $('#idNombre').val() != "" && $('#idPremio').val() != "" && $('#idInscriptos').val() != "" && $('#idOrganizador').val() != "" && $('#idRegistro').val() != "" && $('#idRegistrofin').val() != "" && $('#idDia').val() != "" && $('#idHora').val() != "" && $('#idDia').val() > $('#idRegistrofin').val() && $('#idRegistro').val() < $('#idRegistrofin').val()){
             $('#creartorneo').show('slow');
             $('#pags').show('slow');
             $('#creaciontorneo').hide('fast','swing');
@@ -70,7 +70,7 @@ $(document).ready(function(){
             };
             crearTorneo();
         }else{
-            alert("Por favor complete todos los campos para continuar con la creación.")
+            alert("Por favor verificar datos ingresados.\n" + "Puede que las fechas ingresadas sean erroneas o no sean coherentes.")
         }
     });
 
