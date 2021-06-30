@@ -1,12 +1,14 @@
 function registrar() {
-    iduser = document.getElementById("idUser").value;
-    idpass = document.getElementById("idPass").value;
-    if(chequearExistencia(iduser) == false){
+    iduser = document.getElementById("idUserr").value;
+    idpass = document.getElementById("idPassr").value;
+    if(!chequearExistenciaU(iduser)){
         var nuevo = new NuevoUsuario(iduser,idpass)
         guardarUsuario(nuevo)
+        return true;
     }
     else{
-        console.log("Usuario ya logueado, por favor verificar usuarios registrados en sessionStorage.")
+        alert('Usuario ya existente, por favor inicie sesión o restablezca su contraseña.')
+        return false;
     }
 }
 
@@ -20,7 +22,7 @@ function crearTorneo() {
     var idRegistrofin = $('#idRegistrofin').val();
     var idDia = $('#idDia').val();
     var idHora = $('#idHora').val();
-    if(chequearExistenciaTN(idNombre) == false){
+    if(!chequearExistenciaTN(idNombre)){
         var nuevo = new NuevoTorneo(idJuego,idNombre,idPremio,idInscriptos,idOrganizador,idRegistro,idRegistrofin,idDia,idHora); 
         registrarTorneo(nuevo);
         AplicarDatosTorneoAlDOM(nuevo)

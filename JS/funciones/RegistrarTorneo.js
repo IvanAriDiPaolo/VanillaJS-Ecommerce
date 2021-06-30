@@ -11,11 +11,13 @@ function registrarTorneo(torneo){
 }
 
 function chequearExistenciaTN(idnombre){
-    for (var i=1 ; i<torneosid.length+1;i++){
-        var check = JSON.parse(localStorage.getItem(("T")+i));
-        if (idnombre == check.nombre){
-            return true;
-        } 
+    for (Element in localStorage){
+        if(Element.includes('T')&&Element.length<10){
+            var check = JSON.parse(sessionStorage.getItem(Element));
+            if (idnombre == check.nombre){
+                return true;
+            } 
+        }
     }
     return false;
 }

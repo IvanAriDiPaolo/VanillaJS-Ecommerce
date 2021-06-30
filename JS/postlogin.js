@@ -1,9 +1,46 @@
 $(document).ready(function(){
+    $('#log').hide();
+    $('#reg').hide(); 
     $('.demenu').hide();
     $(".opciones").hide();
-    $("#submit").click(function(){
-        if ($('#idUser').val() != "" && $('#idPass').val() != ""){ 
-            registrar();
+    $('#logg').click(function(){
+        $('#logreg').hide('slow');
+        $('#log').show('slow');
+        $(".box").animate({
+            width: "320px",
+            height: "350px",
+        });
+    })
+    $('#regg').click(function(){
+        $('#logreg').hide('slow');
+        $('#reg').show('slow');
+        $(".box").animate({
+            width: "320px",
+            height: "390px",
+        });
+    })
+    $("#submitr").click(function(){
+        if ($('#idUserr').val() != "" && $('#idPassr').val() != "" && $('#idPassr').val() == $('#idPassrr').val()){ 
+            if (registrar()){
+                $(".box").animate({
+                    padding: "10px 10px",
+                })
+                $('#reg').hide('slow');
+                $(".box").animate({
+                    width: "95%",
+                    height: "95%",
+                });
+                $("#logo").animate({
+                    top: "0",
+                });
+                $(".opciones").show("slow");
+            }
+        }else{
+            alert('Completrar los datos solicitados.')
+        }
+    });
+    $("#submitl").click(function(){
+        if (login($('#idUserl').val(), $('#idPassl').val())){
             $(".box").animate({
                 padding: "10px 10px",
             })
@@ -14,15 +51,15 @@ $(document).ready(function(){
             });
             $("#logo").animate({
                 top: "0",
-                
             });
             $(".opciones").show("slow");
         }else{
-            alert("Completar datos requeridos, Usuario y Contraseña.")
+            alert('Usuario no registrado, por favor registrarse.')
         }
     });
     $("#menutorneo").click(function(){
-        $('#cattorneos').show('')
+        $('.box > div').hide('slow');
+        $('#cattorneos').show('slow');
         $('#torneos').show('slow');
         $('#creaciontorneo').hide();
         $('#cancelarcreacion').hide('fast','swing');
@@ -32,6 +69,10 @@ $(document).ready(function(){
         }else{
             $("#pags div:first-child").show();
         };
+    });
+    $('#menuhome').click(function(){
+        $('.box > div').hide('slow');
+        $('#home').show('slow');
     });
     $("#creartorneo").click(function(){
         $('#pags').hide('slow');
