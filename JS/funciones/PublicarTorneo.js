@@ -1,3 +1,4 @@
+/*Funcion para publicar torneos y verificar si hay 3 en la misma pagina entonces crear una nueva*/
 function publicarTorneo(torneo){
     if ($('#pags > div >ul :last-child').length %27 == 0 || $('#pags > div').length == 0){
         $('#pags').append(`<div id=${$('#pags > div').length+1 }></div>`);

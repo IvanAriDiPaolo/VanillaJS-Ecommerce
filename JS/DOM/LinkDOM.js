@@ -1,3 +1,4 @@
+/*Aplicar datos al DOM de torneos*/
 const AplicarDatosTorneoAlDOM = (_torneo) => {
     let etiquetasDOM = [
         "juego",

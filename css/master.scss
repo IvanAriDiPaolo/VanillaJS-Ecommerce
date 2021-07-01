@@ -153,8 +153,25 @@
                         ul{
                             align-content: center;
                             text-align: center;
+                            .btnInscripcion{
+                                position: relative;
+                                display: flex;
+                                background: rgba(255, 255, 255, 0.1);
+                                height: 45px;
+                                margin: auto;
+                                padding: 5px;
+                                font-weight: bold;
+                                border: simple 8px rgba(0, 0, 0, 0.7);
+                                border-radius: 15px;
+                                border-color: white;
+                                font-size: 15px;
+                                text-align: center;
+                                color: white;
+                            }
                             li{
                                 img{
+                                    border: cadetblue;
+                                    border-radius: 1vw;
                                     width: 23vw;
                                     
                                 }
@@ -217,7 +234,6 @@
                     font-size: 15px;
                     text-align: center;
                     color: white;
-                    
                 }
             }
         }

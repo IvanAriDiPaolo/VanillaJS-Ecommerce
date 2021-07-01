@@ -1,4 +1,5 @@
 torneosid = []
+/*Registra el torneo en el localstorage*/
 function registrarTorneo(torneo){
     if (torneo.id == null){
         torneo.asignarid()
@@ -9,11 +10,11 @@ function registrarTorneo(torneo){
     var reftorneo = JSON.stringify(torneo)
     localStorage.setItem(torneo.id, reftorneo)
 }
-
+/*Chequea la existencia de los torneos segun el nombre de los mismos*/
 function chequearExistenciaTN(idnombre){
     for (Element in localStorage){
         if(Element.includes('T')&&Element.length<10){
-            var check = JSON.parse(sessionStorage.getItem(Element));
+            var check = JSON.parse(localStorage.getItem(Element));
             if (idnombre == check.nombre){
                 return true;
             } 

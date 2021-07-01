@@ -1,3 +1,4 @@
+/*Se registra al usuario segun los datos ingresados y luego chequea si existe o no.*/
 function registrar() {
     iduser = document.getElementById("idUserr").value;
     idpass = document.getElementById("idPassr").value;
@@ -8,10 +9,16 @@ function registrar() {
     }
     else{
         alert('Usuario ya existente, por favor inicie sesión o restablezca su contraseña.')
+        $('#reg').hide('slow');
+        $('#log').show('slow');
+        $(".box").animate({
+            width: "320px",
+            height: "350px",
+        });
         return false;
     }
 }
-
+/*Funcion para crear el torneo y agregarl o al DOM luego de la funcion AplicarDatosTorneoAlDOM*/
 function crearTorneo() {
     var idJuego = $('#idJuego').val();
     var idNombre = $('#idNombre').val();

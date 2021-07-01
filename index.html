@@ -17,6 +17,7 @@
     
 </head>
 <body>
+    <!-- El fondo de la página -->
     <div class="area" >
         <ul class="circles">
                 <li></li>
@@ -31,7 +32,9 @@
                 <li></li>
         </ul>
     </div>
+    <!-- La caja que envuelve todo en todo momento -->
     <div class="box">
+        <!-- Las opciones que aparecen una vez logueado -->
         <section class="opciones">
             <ul>
                 <li ><input class="menu" id="menuhome" type="button" value="HOME"></input></li>
@@ -76,7 +79,7 @@
                     <input type="text" class="ingresartorneo" id="idNombre" placeholder="Nombre del torneo"></input>
                     <input type="text" class="ingresartorneo" id="idPremio" placeholder="Premio del Torneo"></input>
                     <input type="text" class="ingresartorneo" id="idInscriptos" placeholder="Cantidad de jugadores"></input>
-                    <input type="text" class="ingresartorneo" id="idOrganizador" placeholder="Ingrese su usuario"></input>
+                    <input type="text" class="ingresartorneo" id="idOrganizador" disabled="disabled" placeholder=""></input>
                     <label for="idRegistro">Registro:  Desde</label>
                     <input type="date" class="ingresartorneo" id="idRegistro"></input>
                     <label for="idRegistrofin"> hasta</label>
@@ -92,15 +95,15 @@
             <div id="pags">
             </div>
         </div>
-    
         <div id="quienessomos" class="demenu">
             
         </div>
-        
         <div id="contacto" class="demenu">
             
         </div>
+        <!-- El Logo -->
         <img id="logo" src="./img/logo.jpg" alt="">
+        <!-- La pagina de logueo, desde elegir el login o register hasta una vez finalizado. -->
         <section id="firstpage">
             <form action="" id="logreg">
                 <input id="logg" type="button" value="Loguearse" onclick=""></input>
@@ -120,10 +123,8 @@
                 <!-- Submit -->
                 <input id="submitr" type="button" value="REGISTRARSE" onclick=""></input>
                 <p id="failLogin" style="display: none">Usuario o contraseña incorrect@</p>
-                
-                <!-- Contraseña Perdida -->
-                <br><a href="" >¿Perdiste tu contraseña?</a></br>
-                <a href="" >¿Usuario nuevo?</a>
+                <br></br>
+                <a id="concuenta" href="" >¿Ya tenés cuenta?</a>
             </form>
             <form action="" id="log"> 
                 <h1>Log-In</h1>
@@ -139,11 +140,15 @@
                 <p id="failLogin" style="display: none">Usuario o contraseña incorrect@</p>
                 
                 <!-- Contraseña Perdida -->
-                <br><a href="" >¿Perdiste tu contraseña?</a></br>
-                <a href="" >¿Usuario nuevo?</a>
+                <br></br>
+                <a id="usuarionuevo" href="" >¿Usuario nuevo?</a>
             </form>
         </section>
+        <div id="torneosinscripto">
+            
+        </div>
     </div>
+    <!-- Esto lo iba a importar todo a un app.js para que sea más comodo visualmente. -->
     <script src="./JS/funciones/PublicarTorneo.js"></script>
     <script src="./JS/funciones/JsonManager.js"></script>
     <script src="./JS/config/globalVariables.js"></script>
@@ -155,7 +160,6 @@
     <script src="./JS/funciones/RegistrarTorneo.js"></script>
     <script src="./JS/funciones/RegistrodeUsuario.js"></script>
     <script src="./JS/funciones/LogindeUsuario.js"></script>
-    <script src="./JS/funciones/pagTorneos.js"></script>
     <script src="./JS/DOM/LinkDOM.js"></script>
     <script src="./JS/postlogin.js"></script>
     <script src="./JS/UserEvets.js"></script>

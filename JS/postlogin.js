@@ -3,7 +3,30 @@ $(document).ready(function(){
     $('#reg').hide(); 
     $('.demenu').hide();
     $(".opciones").hide();
+    /*Cada uno de los botones ajustados a cada parte*/
+    $('#regg').click(function(){
+        /*Función para que cuando apretes enter se registre*/
+        $(document).keypress(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == '13'){
+                $('#submitr').trigger('click');
+            }
+        });
+        $('#logreg').hide('slow');
+        $('#reg').show('slow');
+        $(".box").animate({
+            width: "320px",
+            height: "390px",
+        });
+    })
     $('#logg').click(function(){
+        /*Función para que cuando apretes enter se registre*/
+        $(document).keypress(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == '13'){
+                $('#submitl').trigger('click');
+            }
+        });
         $('#logreg').hide('slow');
         $('#log').show('slow');
         $(".box").animate({
@@ -11,12 +34,25 @@ $(document).ready(function(){
             height: "350px",
         });
     })
-    $('#regg').click(function(){
+    $('#usuarionuevo').click( function(e) {
+        e.preventDefault();
+        $('#log').hide('slow');
         $('#logreg').hide('slow');
         $('#reg').show('slow');
         $(".box").animate({
             width: "320px",
             height: "390px",
+        });
+        return false;
+    });
+    $('#concuenta').click( function(e) {
+        e.preventDefault();
+        $('#reg').hide('slow');
+        $('#logreg').hide('slow');
+        $('#log').show('slow');
+        $(".box").animate({
+            width: "320px",
+            height: "350px",
         });
     })
     $("#submitr").click(function(){
@@ -36,7 +72,7 @@ $(document).ready(function(){
                 $(".opciones").show("slow");
             }
         }else{
-            alert('Completrar los datos solicitados.')
+            alert('Las contraseñas no coinciden o los datos ingresados son inválidos.')
         }
     });
     $("#submitl").click(function(){
@@ -53,6 +89,9 @@ $(document).ready(function(){
                 top: "0",
             });
             $(".opciones").show("slow");
+            var usuarioactual = $('#idUserl').val();
+            $('#idOrganizador').attr("placeholder", usuarioactual);
+            $('#idOrganizador').val(usuarioactual);
         }else{
             alert('Usuario no registrado, por favor registrarse.')
         }
@@ -114,9 +153,8 @@ $(document).ready(function(){
             alert("Por favor verificar datos ingresados.\n" + "Puede que las fechas ingresadas sean erroneas o no sean coherentes.")
         }
     });
-
 });
-
+/*Función para el scrolldown y up de la sección de torneos*/
 let n = 1;
 $("#pags").on("mousewheel DOMMouseScroll", function (e) {
     var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||
@@ -131,9 +169,3 @@ $("#pags").on("mousewheel DOMMouseScroll", function (e) {
         $(`#pags div:nth-child(${n})`).show()
 }});
 
-$(document).keypress(function(event){
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        $('#submit').trigger('click');
-    }
-});

@@ -6,7 +6,7 @@ function guardarUsuario(usuario){
     var refusuario = JSON.stringify(usuario)
     sessionStorage.setItem(usuario.id, refusuario)
 }
-
+/*Fuinciones para chequear existencia de usuarios y contraseña en el logueo*/
 function chequearExistenciaU(idusuario){
     for (Element in sessionStorage){
         if(Element.includes('S')&&Element.length<10){
@@ -24,7 +24,7 @@ const chequearExistenciaC = (idcontra) => {
         if(Element.includes('S')&&Element.length<10){
             var check = JSON.parse(sessionStorage.getItem(Element));
             if (idcontra == check.contra){
-                console.log('golasdas')
+                console.log('Logueado correctamente.')
                 return true;
             } 
         }

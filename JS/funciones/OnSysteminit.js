@@ -1,4 +1,4 @@
-// usar el window.onload
+/*Carga los datos de los torneos al localStorage y los de usurios al sessionStorage*/
 const LoadDataBaseFromJSON = () => {
     $.getJSON("./data/torneos.json", function (torneos){
         let torneoJSON = ConvertToString(torneos);
