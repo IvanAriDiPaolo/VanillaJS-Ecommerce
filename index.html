@@ -36,15 +36,29 @@
     <div class="box">
         <!-- Las opciones que aparecen una vez logueado -->
         <section class="opciones">
-            <ul>
+            <ul id="menues">
                 <li ><input class="menu" id="menuhome" type="button" value="HOME"></input></li>
                 <li ><input class="menu" id="menutorneo" type="button" value="TORNEOS"></input></li>
             </ul>
-            <ul id="ul2">
+            <!-- <ul id="ul2">
                 <li><input class="menu2" type="button" value="NOSOTROS"></input></li>
                 <li><input class="menu2" type="button" value="CONTACTO"></input></li>
-            </ul>
+            </ul> -->
             <a href="index.html" class="logout"><input class="logout" type="image" src="./img/logout.png" alt=""></a>
+        </section>
+        <section id="torneosinscripto">
+            <div id="torneitosinscripto">
+                <H5>Torneos Inscriptos:</H5>
+                <div id="inscriptoinfo">
+                    <p class="infoinscripcion">Torneo</p>
+                    <p class="infoinscripcion">Fecha</p>
+                    <p class="infoinscripcion">Hora</p>
+                </div>
+                <ul id="inscriptos">
+                </ul>
+            </div>
+            <input id="imgtx" type="button"></input>
+            <a id="imgt"><input type='image' src="./img/t.png" alt=""></input></a>
         </section>
         <div id="home" class="demenu">
             <div id="presentacion">
@@ -53,11 +67,19 @@
                 <h3 class="cansado">Esta es tu solución!</h3>
                 <p class="cansado">Los mejores torneos de tus juegos favoritos en un solo lugar</p>
             </div>
-            <div class="slider" data-flickity-options='{ "wrapAround": true }'>
-                <img class="slide" id="slide-1" src="./img/Carusell/f1.png"></img>
-                <img class="slide" id="slide-2" src="./img/Carusell/f2.jpg"></img>
-                <img class="slide" id="slide-3" src="./img/Carusell/f3.jpg"></img>
-                <img class="slide" id="slide-4" src="./img/Carusell/f4.jpg"></img>
+            <div id="slideshow">
+                <div>
+                    <img src="./img/Carusell/f1.png"></img>
+                </div>
+                <div>
+                    <img src="./img/Carusell/f2.jpg"></img>
+                </div>
+                <div>
+                    <img src="./img/Carusell/f3.jpg"></img>
+                </div>
+                <div>
+                    <img src="./img/Carusell/f4.jpg"></img>
+                </div>
             </div>
         </div>
         <div id="torneos" class="demenu">
@@ -94,12 +116,6 @@
             </div>
             <div id="pags">
             </div>
-        </div>
-        <div id="quienessomos" class="demenu">
-            
-        </div>
-        <div id="contacto" class="demenu">
-            
         </div>
         <!-- El Logo -->
         <img id="logo" src="./img/logo.jpg" alt="">
@@ -144,14 +160,6 @@
                 <a id="usuarionuevo" href="" >¿Usuario nuevo?</a>
             </form>
         </section>
-        <section id="torneosinscripto">
-            <div id="torneitosinscripto">
-                <ul id="inscriptos">
-                </ul>
-            </div>
-            <input id="imgtx" type="button"></input>
-            <a id="imgt"><input type='image' src="./img/t.png" alt=""></input></a>
-        </section>
     </div>
     <!-- Esto lo iba a importar todo a un app.js para que sea más comodo visualmente. -->
     <script src="./JS/funciones/PublicarTorneo.js"></script>
@@ -160,6 +168,7 @@
     <script src="./JS/funciones/GlobalLocalStorageManager.js"></script>
     <script src="./JS/funciones/GlobalSessionStorageManager.js"></script>
     <script src="./JS/funciones/OnSysteminit.js"></script>
+    <script src="./JS/funciones/carousel.js"></script>
     <script src="./JS/Clases/Usuario.js"></script>
     <script src="./JS/Clases/Torneo.js"></script>
     <script src="./JS/funciones/RegistrarTorneo.js"></script>

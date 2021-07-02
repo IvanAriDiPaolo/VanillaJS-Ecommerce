@@ -3,7 +3,8 @@ $(document).ready(function(){
     $('#reg').hide();
     $('#torneosinscripto').hide();
     $('.demenu').hide();
-    $(".opciones").hide();
+    $('.opciones').hide();
+    $('.slider > img').hide();
     /*Cada uno de los botones ajustados a cada parte*/
     $('#regg').click(function(){
         /*Función para que cuando apretes enter se registre*/
@@ -57,7 +58,7 @@ $(document).ready(function(){
         });
     })
     $("#submitr").click(function(){
-        if ($('#idUserr').val() != "" && $('#idPassr').val() != "" && $('#idPassr').val() == $('#idPassrr').val()){ 
+        if ($('#idUserr').val() != "" && $('#idPassr').val() != "" && $('#idPassr').val() == $('#idPassrr').val() && ($('#idPassr').val()).length > 5 && ($('#idPassrr').val()).length > 5){ 
             if (registrar()){
                 $('#reg').hide('slow');
                 $('#logreg').hide('slow');
@@ -69,7 +70,7 @@ $(document).ready(function(){
                 alert('Registrado correctamente, ahora logueate con tu cuenta por favor.')
             }
         }else{
-            alert('Las contraseñas no coinciden o los datos ingresados son inválidos.')
+            alert('Las contraseñas no coinciden o los datos ingresados son inválidos.\nRecordá que el usuario y la contraseña deben \ncontar con al menos 6 caracteres cada uno.')
         }
     });
     $("#submitl").click(function(){
@@ -102,6 +103,8 @@ $(document).ready(function(){
         $('#torneos').show('slow');
         $('#creaciontorneo').hide();
         $('#cancelarcreacion').hide('fast','swing');
+        $(".menu").attr("disabled", false);
+        $("#menutorneo").attr("disabled", true);
         if ($('#pags > div').length > 1){
             $('#pags').children().hide();
             $("#pags div:first-child").show();
@@ -112,6 +115,8 @@ $(document).ready(function(){
     $('#menuhome').click(function(){
         $('.box > div').hide('slow');
         $('#home').show('slow');
+        $(".menu").attr("disabled", false);
+        $("#menuhome").attr("disabled", true);
     });
     $("#creartorneo").click(function(){
         $('#pags').hide('slow');

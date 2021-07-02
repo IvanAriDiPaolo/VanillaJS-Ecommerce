@@ -42,8 +42,24 @@
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  body .box #home img {
-    width: 10rem;
+  body .box #home #slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  body .box #home #slideshow img {
+    width: 100%;
+  }
+  body .box #home #slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
   }
   body .box .opciones {
     top: 0px;
@@ -57,7 +73,7 @@
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-color: black;
   }
@@ -246,15 +262,42 @@
   body .box #torneosinscripto {
     position: absolute;
     right: 0px;
-    bottom: 0px;
+    bottom: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 25vw;
-    height: 30vw;
+    width: 50vw;
+    height: 10vw;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  body .box #torneosinscripto #torneitosinscripto {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(15.5px);
+    -webkit-backdrop-filter: blur(15.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  body .box #torneosinscripto #torneitosinscripto ul li {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-row: 1fr;
+        grid-template-areas: initial;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  body .box #torneosinscripto #torneitosinscripto #inscriptoinfo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
   }
   body .box #torneosinscripto #imgtx {
     position: absolute;
@@ -282,17 +325,6 @@
   }
   body .box #torneosinscripto #imgt input {
     width: 5vw;
-  }
-  body .box #torneosinscripto #torneitosinscripto {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(15.5px);
-    -webkit-backdrop-filter: blur(15.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
   }
 }
 
