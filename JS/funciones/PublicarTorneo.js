@@ -12,4 +12,4 @@ function publicarTorneo(torneo){
     <li><h4>Inicio del Registro: ${torneo.registro}</h4></li>
     <li><h4>Final del Registro: ${torneo.registrofin}</h4></li>
     <li><h4>Dia y Horario: ${torneo.inicio} a las ${torneo.hora}</h4></li>
-    <input type="button" value="Inscribirse" class="btnInscripcion" id="ins${torneo.id}" onclick=""></input>`)))}
+    <input type="button" value="Inscribirse" class="btnInscripcion" id="ins${torneo.id}" onclick="agregarInscripcion(${torneo.id})"></input>`)))}

@@ -166,10 +166,6 @@ $(document).ready(function(){
                     $('#imgtx').hide('slow');
             });
     });
-    $('.btnInscripcion').click(function(){
-        let torneo = ($(this).attr('id')).slice(3);
-        agregarInscripcion(torneo,$('#idUserl').val());
-    });
 });
 /*Función para el scrolldown y up de la sección de torneos*/
 let n = 1;
