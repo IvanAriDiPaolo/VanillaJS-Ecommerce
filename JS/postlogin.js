@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('#log').hide();
-    $('#reg').hide(); 
+    $('#reg').hide();
+    $('#torneosinscripto').hide();
     $('.demenu').hide();
     $(".opciones").hide();
     /*Cada uno de los botones ajustados a cada parte*/
@@ -58,18 +59,14 @@ $(document).ready(function(){
     $("#submitr").click(function(){
         if ($('#idUserr').val() != "" && $('#idPassr').val() != "" && $('#idPassr').val() == $('#idPassrr').val()){ 
             if (registrar()){
-                $(".box").animate({
-                    padding: "10px 10px",
-                })
                 $('#reg').hide('slow');
+                $('#logreg').hide('slow');
+                $('#log').show('slow');
                 $(".box").animate({
-                    width: "95%",
-                    height: "95%",
+                    width: "320px",
+                    height: "350px",
                 });
-                $("#logo").animate({
-                    top: "0",
-                });
-                $(".opciones").show("slow");
+                alert('Registrado correctamente, ahora logueate con tu cuenta por favor.')
             }
         }else{
             alert('Las contraseñas no coinciden o los datos ingresados son inválidos.')
@@ -92,6 +89,9 @@ $(document).ready(function(){
             var usuarioactual = $('#idUserl').val();
             $('#idOrganizador').attr("placeholder", usuarioactual);
             $('#idOrganizador').val(usuarioactual);
+            $('#torneosinscripto').show('slow');
+            $('#torneitosinscripto').hide();
+            $('#imgtx').hide();
         }else{
             alert('Usuario no registrado, por favor registrarse.')
         }
@@ -152,6 +152,18 @@ $(document).ready(function(){
         }else{
             alert("Por favor verificar datos ingresados.\n" + "Puede que las fechas ingresadas sean erroneas o no sean coherentes.")
         }
+    });
+    $("#imgt").click(function(){
+            $('#torneitosinscripto').show('slow');
+            $('#imgtx').show('slow');
+            $("#imgtx").click(function(){
+                    $('#torneitosinscripto').hide('slow');
+                    $('#imgtx').hide('slow');
+            });
+    });
+    $('.btnInscripcion').click(function(){
+        let torneo = ($(this).attr('id')).slice(3);
+        agregarInscripcion(torneo,$('#idUserl').val());
     });
 });
 /*Función para el scrolldown y up de la sección de torneos*/
