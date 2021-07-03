@@ -103,6 +103,21 @@
                     ::-webkit-input-placeholder{
                         color: white;
                     }
+                    #divbuscador{
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        #buscador{
+                            font-weight: bold;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            background: rgba( 17, 4, 4, 0.30 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                            backdrop-filter: blur( 10.0px );
+                            -webkit-backdrop-filter: blur( 10.0px );
+                            border-radius: 10px;
+                            border: 1px solid rgba( 255, 255, 255, 0.18 );
+                        }
+                    }
                 button{
                     position: relative;
                     left: 2vw;

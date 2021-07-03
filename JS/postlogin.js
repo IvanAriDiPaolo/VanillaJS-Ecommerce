@@ -93,6 +93,7 @@ $(document).ready(function(){
             $('#torneosinscripto').show('slow');
             $('#torneitosinscripto').hide();
             $('#imgtx').hide();
+            $("#home").show('slow');
         }else{
             alert('Usuario no registrado, por favor registrarse.')
         }
